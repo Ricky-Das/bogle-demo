@@ -28,32 +28,214 @@ const series: Record<Range, number[]> = {
 };
 
 const transactions = [
-  { id: "TX-9271", customer: "Bloom Coffee", amount: 129.99, time: "10:21" },
-  { id: "TX-9270", customer: "CraftyGoods", amount: 78.45, time: "09:58" },
-  { id: "TX-9269", customer: "FreshFarm", amount: 254.1, time: "09:12" },
-  { id: "TX-9268", customer: "Urban Boutique", amount: 42.0, time: "08:55" },
-  { id: "TX-9267", customer: "Booksy", amount: 18.5, time: "08:47" },
-  { id: "TX-9266", customer: "Gardenia", amount: 312.0, time: "08:15" },
-  { id: "TX-9265", customer: "SunnySide Deli", amount: 63.75, time: "07:59" },
-  { id: "TX-9264", customer: "LuxeBeauty", amount: 147.0, time: "07:42" },
-  { id: "TX-9263", customer: "Pet Paradise", amount: 33.2, time: "07:28" },
-  { id: "TX-9262", customer: "GearHub", amount: 512.9, time: "07:05" },
-  { id: "TX-9261", customer: "GreenLeaf", amount: 94.6, time: "06:48" },
-  { id: "TX-9260", customer: "TasteBuds", amount: 210.0, time: "06:36" },
-  { id: "TX-9259", customer: "Urban Boutique", amount: 87.3, time: "06:22" },
-  { id: "TX-9258", customer: "CraftyGoods", amount: 55.55, time: "06:09" },
-  { id: "TX-9257", customer: "Bloom Coffee", amount: 143.29, time: "05:53" },
-  { id: "TX-9256", customer: "FreshFarm", amount: 298.4, time: "05:37" },
-  { id: "TX-9255", customer: "BikeTown", amount: 410.0, time: "05:20" },
-  { id: "TX-9254", customer: "HomeCraft", amount: 76.8, time: "05:02" },
-  { id: "TX-9253", customer: "SweetTreats", amount: 22.15, time: "04:51" },
-  { id: "TX-9252", customer: "GearHub", amount: 68.0, time: "04:35" },
-  { id: "TX-9251", customer: "Bloom Coffee", amount: 129.99, time: "04:21" },
-  { id: "TX-9250", customer: "CraftyGoods", amount: 78.45, time: "04:03" },
-  { id: "TX-9249", customer: "FreshFarm", amount: 254.1, time: "03:48" },
-  { id: "TX-9248", customer: "Urban Boutique", amount: 42.0, time: "03:32" },
-  { id: "TX-9247", customer: "Booksy", amount: 18.5, time: "03:15" },
-  { id: "TX-9246", customer: "Gardenia", amount: 312.0, time: "03:02" },
+  {
+    id: "TX-9271",
+    customer: "Bloom Coffee",
+    amount: 129.99,
+    time: "10:21",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9270",
+    customer: "CraftyGoods",
+    amount: 78.45,
+    time: "09:58",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9269",
+    customer: "FreshFarm",
+    amount: 254.1,
+    time: "09:12",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9268",
+    customer: "Urban Boutique",
+    amount: 42.0,
+    time: "08:55",
+    method: "ACH",
+    status: "Pending",
+  },
+  {
+    id: "TX-9267",
+    customer: "Booksy",
+    amount: 18.5,
+    time: "08:47",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9266",
+    customer: "Gardenia",
+    amount: 312.0,
+    time: "08:15",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9265",
+    customer: "SunnySide Deli",
+    amount: 63.75,
+    time: "07:59",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9264",
+    customer: "LuxeBeauty",
+    amount: 147.0,
+    time: "07:42",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9263",
+    customer: "Pet Paradise",
+    amount: 33.2,
+    time: "07:28",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9262",
+    customer: "GearHub",
+    amount: 512.9,
+    time: "07:05",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9261",
+    customer: "GreenLeaf",
+    amount: 94.6,
+    time: "06:48",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9260",
+    customer: "TasteBuds",
+    amount: 210.0,
+    time: "06:36",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9259",
+    customer: "Urban Boutique",
+    amount: 87.3,
+    time: "06:22",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9258",
+    customer: "CraftyGoods",
+    amount: 55.55,
+    time: "06:09",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9257",
+    customer: "Bloom Coffee",
+    amount: 143.29,
+    time: "05:53",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9256",
+    customer: "FreshFarm",
+    amount: 298.4,
+    time: "05:37",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9255",
+    customer: "BikeTown",
+    amount: 410.0,
+    time: "05:20",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9254",
+    customer: "HomeCraft",
+    amount: 76.8,
+    time: "05:02",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9253",
+    customer: "SweetTreats",
+    amount: 22.15,
+    time: "04:51",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9252",
+    customer: "GearHub",
+    amount: 68.0,
+    time: "04:35",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9251",
+    customer: "Bloom Coffee",
+    amount: 129.99,
+    time: "04:21",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9250",
+    customer: "CraftyGoods",
+    amount: 78.45,
+    time: "04:03",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9249",
+    customer: "FreshFarm",
+    amount: 254.1,
+    time: "03:48",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9248",
+    customer: "Urban Boutique",
+    amount: 42.0,
+    time: "03:32",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9247",
+    customer: "Booksy",
+    amount: 18.5,
+    time: "03:15",
+    method: "ACH",
+    status: "Settled",
+  },
+  {
+    id: "TX-9246",
+    customer: "Gardenia",
+    amount: 312.0,
+    time: "03:02",
+    method: "ACH",
+    status: "Settled",
+  },
 ];
 
 export default function DashboardDemo() {
@@ -176,16 +358,27 @@ export default function DashboardDemo() {
       >
         <h2 className="text-lg font-semibold mb-6">Recent Transactions</h2>
         <ul className="divide-y divide-black/5 dark:divide-white/10">
+          <li className="hidden md:grid grid-cols-6 text-xs uppercase opacity-70 py-2">
+            <span>Customer</span>
+            <span>Txn ID</span>
+            <span>Method</span>
+            <span>Time</span>
+            <span>Status</span>
+            <span className="text-right">Amount</span>
+          </li>
           {transactions.map((t) => (
-            <li key={t.id} className="py-3 flex items-center justify-between">
-              <div>
-                <span className="font-medium mr-2">{t.customer}</span>
-                <span className="text-xs opacity-60">{t.id}</span>
-              </div>
-              <div className="flex items-center gap-6">
-                <span className="text-sm opacity-70">{t.time}</span>
-                <span className="font-semibold">${t.amount.toFixed(2)}</span>
-              </div>
+            <li
+              key={t.id}
+              className="py-3 grid grid-cols-2 md:grid-cols-6 items-center gap-4"
+            >
+              <span className="font-medium">{t.customer}</span>
+              <span className="text-xs opacity-60 md:block hidden">{t.id}</span>
+              <span className="text-sm md:block hidden">{t.method}</span>
+              <span className="text-sm">{t.time}</span>
+              <span className="text-sm md:block hidden">{t.status}</span>
+              <span className="font-semibold md:text-right">
+                ${t.amount.toFixed(2)}
+              </span>
             </li>
           ))}
         </ul>
