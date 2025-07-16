@@ -184,7 +184,7 @@ export default function Home() {
           </a>
 
           <Link
-            href="/checkout"
+            href="/dashboard"
             className="mt-4 inline-flex items-center gap-3 rounded-full border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 px-8 py-4 text-base font-semibold text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           >
             <span>Try live demo</span>
